@@ -1,0 +1,22 @@
+.container{
+
+width:50%;
+height:60px;
+margin:auto;
+}
+.btn{
+width:20%;
+height:63px;
+border:none;
+background-color: green;
+color:white;
+font-size: x-large;
+
+}
+
+.input{
+width:70%;
+height:95%;
+font-size: larger;
+border:2px solid black
+}
