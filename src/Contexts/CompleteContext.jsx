@@ -19,16 +19,28 @@ export const CompleteProvider=({children})=>{
                 if(action.payload===true)
                 { 
                     console.log(action.index)
-                    task[action.index].status=true 
+                   // task[action.index].status=true 
                     console.log(task)
-                    return(task)
+                    return(task.map((el)=>{
+                        if(el.id===action.index)
+                        {
+                            el.status=true
+                        }
+                        return(el)
+                    }))
                   
                 }
                 else{
                     console.log(action.index)
-                   task[action.index].status=false
+                   //task[action.index].status=false
                    console.log(task)
-                   return(task)
+                   return(task.map((el)=>{
+                    if(el.id===action.index)
+                    {
+                        el.status=false
+                    }
+                    return(el)
+                }))
                     
                 }
             }

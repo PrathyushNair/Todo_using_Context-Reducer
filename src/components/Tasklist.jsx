@@ -8,7 +8,7 @@ let status=false
 return (
     <div >
           <div className={styles.eachdiv} key={el.id}>
-                    <input className={styles.ip} onChange={(e)=>{dispatch({type:"statchange",payload:e.target.checked,index:index,element:el[2]})}} type="checkbox"></input>
+                    <input className={styles.ip} onChange={(e)=>{dispatch({type:"statchange",payload:e.target.checked,index:el.id})}} type="checkbox"></input>
                     {el.status ? <s className={styles.title}>{el.task}</s>:<span className={styles.title}>{el.task}</span>}
                     <button className={styles.del} onClick={()=>{dispatch({type:"del",payload:el.id})}}>Delete</button>
                 </div>
